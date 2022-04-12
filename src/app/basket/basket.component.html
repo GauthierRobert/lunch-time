@@ -1,0 +1,43 @@
+<div class="card">
+  <div class="card-header" id="basket">
+    Panier
+  </div>
+  <div class="card-body">
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Nom</th>
+        <th scope="col">Prix</th>
+        <th scope="col">#</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let basketProduct of basket">
+        <th scope="row">
+          <button class="btn minus" (click)="basketService.subtractProductInBasket(basketProduct)">-</button>
+          <button class="btn plus" (click)="basketService.addProductInBasket(basketProduct)">+</button>
+        </th>
+        <td>{{basketProduct.name}}</td>
+        <td>{{basketProduct.price}}</td>
+        <td>{{basketProduct.quantity}}</td>
+      </tr>
+      </tbody>
+    </table>
+
+    <div *ngIf="!!basketPrice" class="row">
+      <div class="total">{{basketPrice | number: '1.0-2'}} €</div>
+      <form formGroup="commandForm">
+        <select class="my-1 form-select" aria-label="Default select"
+                formControlName="paymentMethod"
+                id="payment-method">
+          <option value="1" selected>Virement</option>
+          <option value="2">Cash</option>
+        </select>
+        <input class="my-1 form-control" type="text" formControlName="trigram" placeholder="Trigramme">
+      </form>
+      <button class="btn btn-success" type="submit">Confirmer la commande</button>
+    </div>
+  </div>
+</div>
+

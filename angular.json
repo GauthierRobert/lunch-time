@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "lunch-time-app"
+  "defaultProject": "lunch-time-app",
+  "cli": {
+    "analytics": false
+  }
 }

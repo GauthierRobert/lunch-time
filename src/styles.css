@@ -1,1 +1,54 @@
+.option {
+  margin-top: 6px;
+  margin-bottom: 3px;
+}
+
+.title{
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.bread-select {
+  width: 200px;
+  height: min-content;
+}
+
+.option-select {
+  align-items: center;
+  display: flex;
+}
+.container-fluid {
+  width: 90%;
+}
+
+.plus{
+  width: 25px;
+  padding: 2px 2px 2px 2px;
+  margin-right: 5px;
+  margin-left: 5px;
+  color: green;
+  border-color: green;
+}
+
+.minus{
+  width: 25px;
+  padding: 2px 2px 2px 2px;
+  margin-right: 5px;
+  margin-left: 5px;
+  color: red;
+  border-color: red;
+}
+
+.total {
+  font-weight: bold;
+  margin-top: 2px;
+  margin-bottom: 10px;
+}
+
+.search{
+  margin-top: 10px;
+  margin-bottom: 2px;
+}
+
 /* You can add global styles to this file, and also import other style files */

@@ -1,0 +1,30 @@
+<div class="card my-1">
+  <div class="card-header" id="headingOne">
+    <div class="d-flex justify-content-between">
+      <button class="btn" type="button" (click)="switchShow()">
+        {{product.name}} <span class="mx-3 text-danger"> {{product.price}} €</span>
+      </button>
+
+      <button class="btn btn-outline-success" type="submit" (click)="addProductToBasket()">Ajouter au panier</button>
+    </div>
+  </div>
+
+  <div class="collapse" [ngClass]="{'show' : isShow()}">
+    <div class="card-body">
+      {{product.description}}
+      <div *ngIf="isSandwich()">
+        <div class="option text-success fw-bold">Options</div>
+        <div class="option-select">
+          <label for="bread-A">Pain : </label>
+          <select class="m-1 bread-select form-select" aria-label="Default select"
+                  name="bread"
+                  id="bread-A">
+            <option value="1" selected>Blanc</option>
+            <option value="2">Gris</option>
+            <option value="3">Compagne</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
